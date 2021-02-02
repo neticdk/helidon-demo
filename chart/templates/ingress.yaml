@@ -1,0 +1,15 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "netic-demo.fullname" . }}
+  labels: {{ include "netic-demo.labels" . | nindent 4 }}
+spec:
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ template "netic-demo.fullname" . }}
+          servicePort: http
+{{- end }}

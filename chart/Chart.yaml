@@ -1,0 +1,10 @@
+apiVersion: v2
+name: netic-demo
+type: application
+description: A Helm chart to demo GitOps deployment
+home: https://git.netic.dk/projects/PD/repos/charts/browse
+version: "0.0.3"
+icon: https://www.netic.dk/wp-content/uploads/2020/07/bluelogo-netic-trifork-blue_641px.png
+maintainers:
+  - name: Thor Anker Kvisgård Lange
+    email: tal@netic.dk
