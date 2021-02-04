@@ -17,4 +17,8 @@ steps:
 - name: Docker build
   image: plugins/docker
   settings:
-    repo: neticdk/helidon-demo
+    repo: langecode/helidon-demo-drone
+    username:
+      from_secret: docker_hub_username
+    password:
+      from_secret: docker_hub_password
