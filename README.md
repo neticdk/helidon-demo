@@ -164,3 +164,5 @@ See the start script help:
 ```
 docker run --rm helidon-quickstart-mp-jri:latest --help
 ```
+
+Trigger build :construction_worker:
