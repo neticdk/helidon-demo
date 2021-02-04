@@ -1,6 +1,5 @@
 ---
 kind: pipeline
-type: kubernetes
 name: default
 
 steps:
@@ -8,3 +7,12 @@ steps:
   image: maven:3.6-jdk-11
   commands:
   - mvn package -DskipTests
+---
+kind: pipeline
+name: deploy
+
+steps:
+- name: Docker build
+  image: plugins/docker
+  settings:
+    repo: neticdk/helidon-demo
