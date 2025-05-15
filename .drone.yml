@@ -5,7 +5,7 @@ type: kubernetes
 
 steps:
 - name: test
-  image: maven:3.6-jdk-11
+  image: maven:3.6-jdk-11@sha256:1d29ccf46ef2a5e64f7de3d79a63f9bcffb4dc56be0ae3daed5ca5542b38aa2d
   commands:
   - mvn package -DskipTests
 ---
@@ -15,7 +15,7 @@ type: kubernetes
 
 steps:
 - name: Docker build
-  image: plugins/docker
+  image: plugins/docker@sha256:4e482ef91fb2695d658a85c60772d7f75f931e0883e23ec0954f0bc17ccc0663
   settings:
     repo: langecode/helidon-demo-drone
     username:
