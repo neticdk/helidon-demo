@@ -15,7 +15,7 @@
 #
 
 # 1st stage, build the app
-FROM maven:3.6-jdk-11 as build
+FROM maven:3.8-jdk-11@sha256:805f366910aea2a91ed263654d23df58bd239f218b2f9562ff51305be81fa215 as build
 
 WORKDIR /helidon
 
